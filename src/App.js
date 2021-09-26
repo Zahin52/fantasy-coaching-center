@@ -1,12 +1,15 @@
-
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Header from './components/header/header'
 import Card from './components/card/card'
 import Cart from './components/cart/cart'
 function App() {
-   const teacherJson = [
+   
+   const [TotalSelected, setTotalSelected] = useState(0)
+   const [TotalCost, setTotalCost] = useState(0)
+   const [addedTeacher, setAddedTeacher] = useState([])
+   const teacher = [
       {
          name: 'Abdul Karim',
          institution: 'BUET',
@@ -17,7 +20,7 @@ function App() {
       },
       {
          name: 'Motaleb Ali',
-         institution: 'DU',
+         ' institution': 'DU',
          subject: 'EEE',
          batch: 10,
          salary: 1200,
@@ -80,16 +83,16 @@ function App() {
          image: 'https://raw.githubusercontent.com/Zahin52/images-json/main/images/10.png',
       },
    ]
-   const [TotalSelected, setTotalSelected] = useState(0)
-   const [TotalCost, setTotalCost] = useState(0)
-   const [addedTeacher, setAddedTeacher] = useState([])
+
+
+  
    // console.log(TotalCost);
    return (
       <div className="App ">
          <Header />
          <div className="row ">
             <div className="col-9 px-5 py-0 row ">
-               {teacherJson.map((data) => (
+               {teacher.map((data) => (
                   <Card
                      info={data}
                      setTotalCost={setTotalCost}
