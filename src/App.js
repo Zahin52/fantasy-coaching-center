@@ -12,7 +12,7 @@ function App() {
          subject: 'CSE',
          batch: 18,
          salary: 1200,
-         image: 'images/1.png',
+         image: 'https://raw.githubusercontent.com/ProgrammingHeroWC4/the-superhero-direction-Zahin52/main/src/images/1.png?token=AKGB2XFVFMGYAICV6FF24D3BKB33I',
       },
       {
          name: 'Motaleb ali',
@@ -20,7 +20,7 @@ function App() {
          subject: 'EEE',
          batch: 18,
          salary: 1200,
-         image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+         image: 'https://raw.githubusercontent.com/ProgrammingHeroWC4/the-superhero-direction-Zahin52/main/src/images/2.png?token=AKGB2XED2ERJUJWEZJZRY63BKB35Y',
       },
       {
          name: 'Samser molla',
@@ -28,7 +28,7 @@ function App() {
          subject: 'CSE',
          batch: 18,
          salary: 1200,
-         image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWVufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+         image: 'https://raw.githubusercontent.com/ProgrammingHeroWC4/the-superhero-direction-Zahin52/main/src/images/3.jpg?token=AKGB2XCYMZWCR3FC5PJS75TBKB37A',
       },
       {
          name: 'karim kuddus',
