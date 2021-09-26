@@ -1,4 +1,4 @@
-import logo from './logo.svg'
+
 import './App.css'
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -81,19 +81,29 @@ function App() {
       },
    ]
    const [TotalSelected, setTotalSelected] = useState(0)
-//    const [TotalSelected, setTotalSelected] = useState(0)
-    // console.log(TotalCost);
+   const [TotalCost, setTotalCost] = useState(0)
+   const [addedTeacher, setAddedTeacher] = useState([])
+   // console.log(TotalCost);
    return (
       <div className="App ">
          <Header />
          <div className="row ">
             <div className="col-9 px-5 py-0 row ">
                {teacherJson.map((data) => (
-                  <Card info={data} setTotalSelected={setTotalSelected} />
+                  <Card
+                     info={data}
+                     setTotalCost={setTotalCost}
+                     setTotalSelected={setTotalSelected}
+                     teacherList={setAddedTeacher}
+                  />
                ))}
             </div>
             <div div className="col-3">
-               <Cart TotalSelected={TotalSelected} />
+               <Cart
+                  TotalSelected={TotalSelected}
+                  TotalCost={TotalCost}
+                  addedTeacher={addedTeacher}
+               />
             </div>
          </div>
       </div>

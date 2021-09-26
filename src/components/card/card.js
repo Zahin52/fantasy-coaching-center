@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function Card({info,setTotalSelected}) {
+export default function Card({info,setTotalSelected, setTotalCost,teacherList}) {
     const { image, name, institution, subject, salary, batch } = info;
-    const CartUpdate = () => {
-        setTotalSelected((prevValue)=>prevValue+1);
+    const CartUpdate = (salary,name) => {
+        setTotalSelected((prev) => prev + 1);
+        setTotalCost((prev => prev + salary));
+        teacherList((prev) => [...prev,name])
     }
    return (
       <div className="col-4 mb-2">
@@ -17,9 +19,9 @@ export default function Card({info,setTotalSelected}) {
                <p class="card-text m-1">Subject: {subject}</p>
                <p class="card-text m-1">Batch: {batch}</p>
                <p class="card-text m-1 mb-3">Salary: {salary}</p>
-               <a href="#" onClick={CartUpdate} className="btn btn-primary w-100">
+               <button onClick={()=>CartUpdate(salary,name)} className="btn btn-primary w-100">
                   <i class="fab fa-telegram"></i> Ready to hire
-               </a>
+               </button>
             </div>
          </div>
       </div>
