@@ -1,11 +1,12 @@
 import logo from './logo.svg'
 import './App.css'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import Header from './components/header/header'
 import Card from './components/card/card'
 import Cart from './components/cart/cart'
 function App() {
-   const Array = [
+   const teacherJson = [
       {
          name: 'Abdul Karim',
          institution: 'BUET',
@@ -79,17 +80,20 @@ function App() {
          image: 'https://raw.githubusercontent.com/Zahin52/images-json/main/images/10.png',
       },
    ]
+   const [TotalSelected, setTotalSelected] = useState(0)
+//    const [TotalSelected, setTotalSelected] = useState(0)
+    // console.log(TotalCost);
    return (
-      <div className="App container">
+      <div className="App ">
          <Header />
          <div className="row ">
-            <div className="col-10 row ">
-               {Array.map((data) => (
-                  <Card info={data} />
+            <div className="col-9 px-5 py-0 row ">
+               {teacherJson.map((data) => (
+                  <Card info={data} setTotalSelected={setTotalSelected} />
                ))}
             </div>
-            <div div className="col-2">
-               <Cart />
+            <div div className="col-3">
+               <Cart TotalSelected={TotalSelected} />
             </div>
          </div>
       </div>
