@@ -5,8 +5,10 @@ export default function Card({info}) {
     console.log(image);
    return (
       <div className="col-4 my-2">
-         <div className="card ">
-            <img src={image} className="card-img-top img-fluid" alt="teacherimage" />
+         <div className="card shadow">
+            <div className="card-body ">
+                   <img src={image} className="card-img-top img-fluid" alt="teacherimage" />
+            </div>
             <div className="card-body">
                <h5 class="card-title fw-bold">{name}</h5>
                <p class="card-text m-1">Institution: {institution}</p>
